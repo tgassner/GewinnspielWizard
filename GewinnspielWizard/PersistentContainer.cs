@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GewinnspielWizard {
     class PersistentContainer {
-        public string EmailEntries{ get; set; }
-
+        public IList<EmailEntry> EmailEntries{ get; set; }
+        public string MailServer { get; set; }
+        public string MailUsername { get; set; }
+        public string DestinationEmailAddress { get; set; }
+        public string MailSubject { get; set; }
+        public string MailBody { get; set; }
     }
 }

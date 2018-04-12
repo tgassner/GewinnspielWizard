@@ -11,7 +11,7 @@ namespace GewinnspielWizard {
 
         public static void Store(string fileName, PersistentContainer persistentContainer) {
             string json = JsonConvert.SerializeObject(persistentContainer);
-            WriteFile("", json);
+            WriteFile(fileName, json);
         }
 
         public static PersistentContainer Load(string fileName) {
@@ -32,9 +32,9 @@ namespace GewinnspielWizard {
         }
 
         public static void WriteFile(String sFilename, String sLines) {
-            StreamWriter myFile = new StreamWriter(sFilename);
-            myFile.Write(sLines);
-            myFile.Close();
+            using (StreamWriter myFile = new StreamWriter(sFilename)) {
+                myFile.Write(sLines);
+            }
         }
     }
 }

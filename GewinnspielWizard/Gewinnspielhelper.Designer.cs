@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label_persistance_file = new System.Windows.Forms.Label();
-            this.textBox_persistance_file = new System.Windows.Forms.TextBox();
-            this.button_file_load_dialog = new System.Windows.Forms.Button();
-            this.button_load = new System.Windows.Forms.Button();
-            this.button_save = new System.Windows.Forms.Button();
+            this.textBoxPersistanceFile = new System.Windows.Forms.TextBox();
+            this.buttonFileLoadDialog = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.label_mail_username = new System.Windows.Forms.Label();
             this.textBoxMailUserName = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
@@ -40,12 +40,14 @@
             this.labelMailServer = new System.Windows.Forms.Label();
             this.textBoxMailServer = new System.Windows.Forms.TextBox();
             this.labelMailSubject = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMailSubject = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxMailBody = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelMailSender = new System.Windows.Forms.FlowLayoutPanel();
             this.labelMailSender = new System.Windows.Forms.Label();
             this.buttonAddSenderEntry = new System.Windows.Forms.Button();
+            this.labelDestinationAddress = new System.Windows.Forms.Label();
+            this.textBoxDestinationEmailAddress = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_persistance_file
@@ -57,42 +59,42 @@
             this.label_persistance_file.TabIndex = 0;
             this.label_persistance_file.Text = "Persistance File:";
             // 
-            // textBox_persistance_file
+            // textBoxPersistanceFile
             // 
-            this.textBox_persistance_file.Location = new System.Drawing.Point(100, 10);
-            this.textBox_persistance_file.Name = "textBox_persistance_file";
-            this.textBox_persistance_file.Size = new System.Drawing.Size(596, 20);
-            this.textBox_persistance_file.TabIndex = 1;
+            this.textBoxPersistanceFile.Location = new System.Drawing.Point(100, 10);
+            this.textBoxPersistanceFile.Name = "textBoxPersistanceFile";
+            this.textBoxPersistanceFile.Size = new System.Drawing.Size(596, 20);
+            this.textBoxPersistanceFile.TabIndex = 1;
             // 
-            // button_file_load_dialog
+            // buttonFileLoadDialog
             // 
-            this.button_file_load_dialog.Location = new System.Drawing.Point(702, 7);
-            this.button_file_load_dialog.Name = "button_file_load_dialog";
-            this.button_file_load_dialog.Size = new System.Drawing.Size(75, 23);
-            this.button_file_load_dialog.TabIndex = 2;
-            this.button_file_load_dialog.Text = "FileOpenDialog";
-            this.button_file_load_dialog.UseVisualStyleBackColor = true;
-            this.button_file_load_dialog.Click += new System.EventHandler(this.button_file_load_dialog_Click);
+            this.buttonFileLoadDialog.Location = new System.Drawing.Point(702, 7);
+            this.buttonFileLoadDialog.Name = "buttonFileLoadDialog";
+            this.buttonFileLoadDialog.Size = new System.Drawing.Size(75, 23);
+            this.buttonFileLoadDialog.TabIndex = 2;
+            this.buttonFileLoadDialog.Text = "FileOpenDialog";
+            this.buttonFileLoadDialog.UseVisualStyleBackColor = true;
+            this.buttonFileLoadDialog.Click += new System.EventHandler(this.buttonFileLoadDialogClick);
             // 
-            // button_load
+            // buttonLoad
             // 
-            this.button_load.Location = new System.Drawing.Point(702, 33);
-            this.button_load.Name = "button_load";
-            this.button_load.Size = new System.Drawing.Size(75, 23);
-            this.button_load.TabIndex = 3;
-            this.button_load.Text = "Load";
-            this.button_load.UseVisualStyleBackColor = true;
-            this.button_load.Click += new System.EventHandler(this.button_load_Click);
+            this.buttonLoad.Location = new System.Drawing.Point(702, 33);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoad.TabIndex = 3;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.button_load_Click);
             // 
-            // button_save
+            // buttonSave
             // 
-            this.button_save.Location = new System.Drawing.Point(702, 60);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(75, 23);
-            this.button_save.TabIndex = 4;
-            this.button_save.Text = "Save";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.buttonSave.Location = new System.Drawing.Point(702, 60);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 4;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.button_save_Click);
             // 
             // label_mail_username
             // 
@@ -146,23 +148,23 @@
             // labelMailSubject
             // 
             this.labelMailSubject.AutoSize = true;
-            this.labelMailSubject.Location = new System.Drawing.Point(26, 117);
+            this.labelMailSubject.Location = new System.Drawing.Point(26, 143);
             this.labelMailSubject.Name = "labelMailSubject";
             this.labelMailSubject.Size = new System.Drawing.Size(68, 13);
             this.labelMailSubject.TabIndex = 11;
             this.labelMailSubject.Text = "Mail Subject:";
             // 
-            // textBox1
+            // textBoxMailSubject
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(677, 20);
-            this.textBox1.TabIndex = 12;
+            this.textBoxMailSubject.Location = new System.Drawing.Point(100, 140);
+            this.textBoxMailSubject.Name = "textBoxMailSubject";
+            this.textBoxMailSubject.Size = new System.Drawing.Size(677, 20);
+            this.textBoxMailSubject.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 143);
+            this.label2.Location = new System.Drawing.Point(38, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 13;
@@ -170,7 +172,7 @@
             // 
             // textBoxMailBody
             // 
-            this.textBoxMailBody.Location = new System.Drawing.Point(100, 140);
+            this.textBoxMailBody.Location = new System.Drawing.Point(100, 166);
             this.textBoxMailBody.Multiline = true;
             this.textBoxMailBody.Name = "textBoxMailBody";
             this.textBoxMailBody.Size = new System.Drawing.Size(677, 129);
@@ -180,15 +182,15 @@
             // 
             this.flowLayoutPanelMailSender.AutoScroll = true;
             this.flowLayoutPanelMailSender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.flowLayoutPanelMailSender.Location = new System.Drawing.Point(12, 319);
+            this.flowLayoutPanelMailSender.Location = new System.Drawing.Point(13, 347);
             this.flowLayoutPanelMailSender.Name = "flowLayoutPanelMailSender";
-            this.flowLayoutPanelMailSender.Size = new System.Drawing.Size(765, 568);
+            this.flowLayoutPanelMailSender.Size = new System.Drawing.Size(765, 540);
             this.flowLayoutPanelMailSender.TabIndex = 15;
             // 
             // labelMailSender
             // 
             this.labelMailSender.AutoSize = true;
-            this.labelMailSender.Location = new System.Drawing.Point(12, 301);
+            this.labelMailSender.Location = new System.Drawing.Point(12, 327);
             this.labelMailSender.Name = "labelMailSender";
             this.labelMailSender.Size = new System.Drawing.Size(63, 13);
             this.labelMailSender.TabIndex = 16;
@@ -197,24 +199,42 @@
             // buttonAddSenderEntry
             // 
             this.buttonAddSenderEntry.Image = global::GewinnspielWizard.Properties.Resources.add;
-            this.buttonAddSenderEntry.Location = new System.Drawing.Point(81, 275);
+            this.buttonAddSenderEntry.Location = new System.Drawing.Point(81, 301);
             this.buttonAddSenderEntry.Name = "buttonAddSenderEntry";
             this.buttonAddSenderEntry.Size = new System.Drawing.Size(40, 40);
             this.buttonAddSenderEntry.TabIndex = 17;
             this.buttonAddSenderEntry.UseVisualStyleBackColor = true;
             this.buttonAddSenderEntry.Click += new System.EventHandler(this.buttonAddSenderEntry_Click);
             // 
+            // labelDestinationAddress
+            // 
+            this.labelDestinationAddress.AutoSize = true;
+            this.labelDestinationAddress.Location = new System.Drawing.Point(2, 118);
+            this.labelDestinationAddress.Name = "labelDestinationAddress";
+            this.labelDestinationAddress.Size = new System.Drawing.Size(91, 13);
+            this.labelDestinationAddress.TabIndex = 18;
+            this.labelDestinationAddress.Text = "Destination Addr.:";
+            // 
+            // textBoxDestinationEmailAddress
+            // 
+            this.textBoxDestinationEmailAddress.Location = new System.Drawing.Point(100, 114);
+            this.textBoxDestinationEmailAddress.Name = "textBoxDestinationEmailAddress";
+            this.textBoxDestinationEmailAddress.Size = new System.Drawing.Size(434, 20);
+            this.textBoxDestinationEmailAddress.TabIndex = 19;
+            // 
             // Gewinnspielhelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 899);
+            this.Controls.Add(this.textBoxDestinationEmailAddress);
+            this.Controls.Add(this.labelDestinationAddress);
             this.Controls.Add(this.buttonAddSenderEntry);
             this.Controls.Add(this.labelMailSender);
             this.Controls.Add(this.flowLayoutPanelMailSender);
             this.Controls.Add(this.textBoxMailBody);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxMailSubject);
             this.Controls.Add(this.labelMailSubject);
             this.Controls.Add(this.textBoxMailServer);
             this.Controls.Add(this.labelMailServer);
@@ -222,10 +242,10 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.textBoxMailUserName);
             this.Controls.Add(this.label_mail_username);
-            this.Controls.Add(this.button_save);
-            this.Controls.Add(this.button_load);
-            this.Controls.Add(this.button_file_load_dialog);
-            this.Controls.Add(this.textBox_persistance_file);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonFileLoadDialog);
+            this.Controls.Add(this.textBoxPersistanceFile);
             this.Controls.Add(this.label_persistance_file);
             this.Name = "Gewinnspielhelper";
             this.Text = "Gewinnspiel Wizard";
@@ -237,10 +257,10 @@
         #endregion
 
         private System.Windows.Forms.Label label_persistance_file;
-        private System.Windows.Forms.TextBox textBox_persistance_file;
-        private System.Windows.Forms.Button button_file_load_dialog;
-        private System.Windows.Forms.Button button_load;
-        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.TextBox textBoxPersistanceFile;
+        private System.Windows.Forms.Button buttonFileLoadDialog;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label label_mail_username;
         private System.Windows.Forms.TextBox textBoxMailUserName;
         private System.Windows.Forms.Label labelPassword;
@@ -248,12 +268,14 @@
         private System.Windows.Forms.Label labelMailServer;
         private System.Windows.Forms.TextBox textBoxMailServer;
         private System.Windows.Forms.Label labelMailSubject;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMailSubject;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxMailBody;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMailSender;
         private System.Windows.Forms.Label labelMailSender;
         private System.Windows.Forms.Button buttonAddSenderEntry;
+        private System.Windows.Forms.Label labelDestinationAddress;
+        private System.Windows.Forms.TextBox textBoxDestinationEmailAddress;
     }
 }
 

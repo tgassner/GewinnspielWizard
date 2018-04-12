@@ -30,9 +30,9 @@
             this.labelSenderName = new System.Windows.Forms.Label();
             this.labelSenderEmail = new System.Windows.Forms.Label();
             this.labelFooter = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxSenderName = new System.Windows.Forms.TextBox();
+            this.textBoxSenderEmail = new System.Windows.Forms.TextBox();
+            this.textBoxSenderFooter = new System.Windows.Forms.TextBox();
             this.buttonDeleteSenderEntry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,27 +63,27 @@
             this.labelFooter.TabIndex = 2;
             this.labelFooter.Text = "Sender Footer:";
             // 
-            // textBox1
+            // textBoxSenderName
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBoxSenderName.Location = new System.Drawing.Point(85, 3);
+            this.textBoxSenderName.Name = "textBoxSenderName";
+            this.textBoxSenderName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSenderName.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxSenderEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxSenderEmail.Location = new System.Drawing.Point(85, 29);
+            this.textBoxSenderEmail.Name = "textBoxSenderEmail";
+            this.textBoxSenderEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSenderEmail.TabIndex = 4;
             // 
-            // textBox3
+            // textBoxSenderFooter
             // 
-            this.textBox3.Location = new System.Drawing.Point(281, 3);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(366, 99);
-            this.textBox3.TabIndex = 5;
+            this.textBoxSenderFooter.Location = new System.Drawing.Point(281, 3);
+            this.textBoxSenderFooter.Multiline = true;
+            this.textBoxSenderFooter.Name = "textBoxSenderFooter";
+            this.textBoxSenderFooter.Size = new System.Drawing.Size(366, 99);
+            this.textBoxSenderFooter.TabIndex = 5;
             // 
             // buttonDeleteSenderEntry
             // 
@@ -101,9 +101,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.buttonDeleteSenderEntry);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSenderFooter);
+            this.Controls.Add(this.textBoxSenderEmail);
+            this.Controls.Add(this.textBoxSenderName);
             this.Controls.Add(this.labelFooter);
             this.Controls.Add(this.labelSenderEmail);
             this.Controls.Add(this.labelSenderName);
@@ -119,9 +119,9 @@
         private System.Windows.Forms.Label labelSenderName;
         private System.Windows.Forms.Label labelSenderEmail;
         private System.Windows.Forms.Label labelFooter;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxSenderName;
+        private System.Windows.Forms.TextBox textBoxSenderEmail;
+        private System.Windows.Forms.TextBox textBoxSenderFooter;
         private System.Windows.Forms.Button buttonDeleteSenderEntry;
     }
 }

@@ -21,5 +21,11 @@ namespace GewinnspielWizard
         {
             MessageBox.Show("TODO Delete");
         }
+
+        public string TextBoxSenderNameText { get => textBoxSenderName.Text; set => textBoxSenderName.Text = value; }
+
+        public string TextBoxSenderEmailText { get => textBoxSenderEmail.Text; set => textBoxSenderEmail.Text = value; }
+
+        public string TextBoxSenderFooterText { get => textBoxSenderFooter.Text; set => textBoxSenderFooter.Text = value; }
     }
 }
